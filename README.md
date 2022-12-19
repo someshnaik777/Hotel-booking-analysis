@@ -1,14 +1,14 @@
-# Hotel-booking-analysis
-Exponential data analysis and visualization using python 
+# Hotel Bookings Exploratory Data Analysis
 
-#Objective
-We are provided with a hotel bookings dataset.
+## Objective
+We are provided with a hotel bookings dataset. 
 
 Out main objective is perform EDA on the given dataset and draw useful conclusions about general trends in hotel bookings and how factors governing hotel bookings interact with each other.
 
-#Dataset
+## Dataset
 We are given a hotel bookings dataset. This dataset contains booking information for a city hotel and a resort hotel. It contains the following features.
 
+```
 - hotel: Name of hotel ( City or Resort)
 - is_canceled: Whether the booking is canceled or not (0 for no canceled and 1 for canceled)
 - lead_time: time (in days) between booking transaction and actual arrival.
@@ -42,27 +42,39 @@ We are given a hotel bookings dataset. This dataset contains booking information
 - total_of_special_requests: total no. of special request.
 - reservation_status: Whether a customer has checked out or canceled,or not showed 
 - reservation_status_date: Date of making reservation status.
-Total number of rows in data: 119390
-Total number of columns: 32
-#Data Cleaning and Feature Engineering
-#(1) Removing Duplicate rows
+```
+
+- Total number of rows in data: 119390
+- Total number of columns: 32
+## Data Cleaning and Feature Engineering
+
+### (1) Removing Duplicate rows
 All duplicate rows were dropped.
 
-#(2) Handling null values
-Null values in columns company and agent were replaced by 0.
-Null values in column country were replaced by 'others'.
-Null values in column children were replaced by the mean of the column.
-#(3) Converting columns to appropriate data types
-Changed data type of children, company, agent to int type.
-Changed data type of reservation_status_date to date type.
-#(4) Removing outliers
-One outlier was found in the adr column. Simply dropped it.
-#(5) Creating new columns
-Created new column total_stay by adding stays_in_weekend_nights+stays_in_week_nights.
-Created new column total_people by adding adults+children+babies.
-#Exploratory Data Analysis
+### (2) Handling null values
+- Null values in columns `company` and `agent` were replaced by 0.
+- Null values in column `country` were replaced by 'others'.
+- Null values in column `children` were replaced by the mean of the column.
+  
+
+### (3) Converting columns to appropriate data types
+
+- Changed data type of `children`, `company`, `agent` to int type.
+- Changed data type of `reservation_status_date` to date type.
+
+### (4) Removing outliers
+
+- One outlier was found in the `adr` column. Simply dropped it.
+
+### (5) Creating new columns
+- Created new column `total_stay` by adding `stays_in_weekend_nights`+`stays_in_week_nights`.
+- Created new column `total_people` by adding `adults`+`children`+`babies`.
+
+## Exploratory Data Analysis
+
 Performed EDA and tried answering the following questions:
 
+```
  Q1) Which agent makes the most no. of bookings?
  Q2) Which room type is in most demand and which room type generatesthe  highest adr?
  Q3) Which meal type isthe  most preffered meal of customers?
@@ -86,18 +98,21 @@ Performed EDA and tried answering the following questions:
  Q21) What is the trend of bookings within a month?
  Q22) Which types of customers mostly make bookings?
 
+```
+
 Mainly performed using Matplotlib and Seaborn library and the following graph and plots had been used:
+  -  Bar Plot.
+  -  Histogram.
+   - Scatter Plot.
+   - Pie Chart.
+   - Line Plot.
+   - Heatmap.
+- Box Plot
+             
+###  Univariate Analysis:
 
-Bar Plot.
-Histogram.
-Scatter Plot.
-Pie Chart.
-Line Plot.
-Heatmap.
-Box Plot
-#Univariate Analysis:
 Performed univariate analysis and made following conclusions:
-
+```
  1.) Agent no. 9 has made most no. of bookings.
  2.) Most demanded room type is A, but better adr generating rooms H, G and C. Hotels should increase the no. of room types A and H to maximise revenue.
  3.) Most popular meal type is BB(Bed and Breakfast).
@@ -107,9 +122,15 @@ Performed univariate analysis and made following conclusions:
  7.) Most of the guests came from european countries, with highest number of guests from Portugal.
  8.) Most common stay length is less than 4 days and generally people prefer City hotel for short stay, but for long stays, Resort Hotel is preferred.
  
-#Bivariate Analysis :
-We tried to answer following questions
+```
 
+
+
+
+### Bivariate Analysis :
+
+We tried to answer following questions
+```
  1.) Overall adr of City hotel is slightly higher than Resort hotel and no. of bookings of City hotel is also higher than Resort hotel. Hence, City hotel is makes more revenue.
  2.) City hotel has slightly higher median lead time. Also median lead time is significantly higher for both hotels, this means customers generally plan their hotel   visits way early.
  3.) Almost 30 % of City Hotel bookings got canceled.
@@ -123,7 +144,11 @@ We tried to answer following questions
  11.) Not getting same room do affects the adr, people who didn't got same room have paid a little lower adr. 
  12.) Arrivals in hotels increases at weekends and also the avg adr tends to go up as month ends. 
  13.)Moslty bookings are done by couples(bookings have two adults.)
-#Conclusion
+```
+
+## Conclusion
+
+```
 (1) Around 60% bookings are for City hotel and 40% bookings are for Resort hotel, therefore City Hotel is busier than Resort hotel. Also the overall adr of City hotel is slightly higher than Resort hotel.
 (2) Mostly guests stay for less than 5 days in hotel and for longer stays Resort hotel is preferred.
 (3) Both hotels have significantly higher booking cancellation rates and very few guests less than 3 % return for another booking in City hotel. 5% guests return for stay in Resort hotel.
@@ -140,9 +165,12 @@ We tried to answer following questions
 (14) For customers, generally the longer stays (more than 15 days) can result in better deals in terms of low adr.
 
 And many more conclusions.
-#Challenges
+```
+## Challenges
+```
 (1) There was a lot of duplicate data.
 (2) Data was present in wrong datatype format.
 (3) Choosing appropriate visualization techniques to use was difficult.
 (4) A lot of null values were there in the dataset.
+
 
