@@ -25,8 +25,7 @@ We are given a hotel bookings dataset. This dataset contains booking information
 - country: Country of origin of customers (as mentioned by them)
 - market_segment: What segment via booking was made and for what purpose.
 - distribution_channel: Via which medium booking was made.
-- is_repeated_guest: Whether the customer has made any booking before(0 for No and 1 for 
-                     Yes)
+- is_repeated_guest: Whether the customer has made any booking before(0 for No and 1 for  Yes)
 - previous_cancellations: No. of previous canceled bookings.
 - previous_bookings_not_canceled: No. of previous non-canceled bookings.
 - reserved_room_type: Room type reserved by a customer.
@@ -64,7 +63,7 @@ All duplicate rows were dropped.
 
 ### (4) Removing outliers
 
-- One outlier was found in the `adr` column. Simply dropped it.
+- eight outliers were found in the column. Simply dropped it.
 
 ### (5) Creating new columns
 - Created new column `total_stay` by adding `stays_in_weekend_nights`+`stays_in_week_nights`.
@@ -106,8 +105,8 @@ Mainly performed using Matplotlib and Seaborn library and the following graph an
    - Scatter Plot.
    - Pie Chart.
    - Line Plot.
-   - Heatmap.
-- Box Plot
+   - countplot
+   - Box Plot
              
 ###  Univariate Analysis:
 
